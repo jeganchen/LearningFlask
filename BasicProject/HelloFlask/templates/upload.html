@@ -1,0 +1,13 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="upload-select">
+    <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileUpload" />
+        <input type="submit" value="Upload" />
+
+    </form>
+
+</div>
+{% endblock %}
