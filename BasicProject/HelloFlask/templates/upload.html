@@ -9,5 +9,55 @@
 
     </form>
 
+
+
 </div>
+{% if result %}
+<table border="1">
+    <tr>
+        <td>
+            Order Brand
+        </td>
+        <td>
+            Toy
+        </td>
+        <td>
+            Order#
+        </td>
+        <td>
+            FOB price
+        </td>
+        <td>
+            Selling Year
+        </td>
+        <td>
+            Effective Fr Date
+        </td>
+        <td>
+            Effective To Date
+        </td>
+        <td>
+            SOC
+        </td>
+        <td>
+            Urgent Flag
+        </td>
+    </tr>
+    {% for row in result %}
+    <tr>
+        <td>{{row.COMPTR}}</td>
+        <td>{{row.TOYNTR}}</td>
+        <td>{{row.ORNOTR}}</td>
+        <td>{{row.FOBPTR}}</td>
+        <td>{{row.SELYTR}}</td>
+        <td>{{row.EFDTTR}}</td>
+        <td>{{row.ETDTTR}}</td>
+        <td>{{row.SDOCTR}}</td>
+        <td>{{row.URGTTR}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
 {% endblock %}
+
